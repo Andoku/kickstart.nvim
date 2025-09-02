@@ -14,10 +14,21 @@ return {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
+    event_handlers = {
+      {
+        event = 'file_open_requested',
+        handler = function()
+          require('neo-tree.command').execute { action = 'close' }
+        end,
+      },
+    },
     filesystem = {
       window = {
+        position = 'right',
         mappings = {
           ['\\'] = 'close_window',
+          ['h'] = 'close_node',
+          ['l'] = 'open',
         },
       },
     },
