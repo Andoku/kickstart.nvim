@@ -11,7 +11,7 @@ return {
   },
   lazy = false,
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>e', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
     event_handlers = {
@@ -26,7 +26,7 @@ return {
       window = {
         position = 'right',
         mappings = {
-          ['\\'] = 'close_window',
+          ['<leader>e'] = 'close_window',
           ['h'] = 'close_node',
           ['l'] = 'open',
         },
