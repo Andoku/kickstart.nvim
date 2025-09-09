@@ -6,6 +6,8 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+vim.g.editorconfig = false
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
@@ -366,7 +368,6 @@ require('lazy').setup({
 
       vim.keymap.set('n', '<C-f>', builtin.find_files, { desc = '[S]earch [F]iles' })
       vim.keymap.set('n', '<C-g>', builtin.live_grep, { desc = '[S]earch by [G]rep' })
-      vim.keymap.set('n', '<C-r>', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<C-w>', builtin.grep_string, { desc = '[S]earch current [W]ord' })
 
       -- Slightly advanced example of overriding default behavior and theme
